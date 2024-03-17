@@ -19,7 +19,7 @@ body {
 }
 
 .noticeboard {
-  font-size: 1vw;
+  font-size: 10px;
   text-align: center;
   margin: 0 auto;
   width: 400px;
@@ -63,9 +63,9 @@ button {
 }
 
 #btn1 {
-  background-color: #4dbf7a;
+  background-color: #6746b2;
 }
 
 #btn2 {
-  background-color: #309f3d;
+  background-color: #25f2db;
 }

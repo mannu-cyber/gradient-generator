@@ -34,19 +34,18 @@ colorFields.addEventListener("click", () => {
   window.navigator.clipboard
     .writeText(hexaString)
     .then(() => {
-      done();
+      alert("copied successfuly");
     })
     .catch(() => {});
 });
 
-
-
-const done = () => {
-  document.querySelector("#animebutton").addEventListener("click", () => {
-    gsap.from(".noticeboard h1", {
-      top: 30,
-      scale: 0,
-      y: -20,
-    });
-  });
-};
+// function done() {
+//   settim;
+//   document.querySelector("#animebutton").addEventListener("click", () => {
+//     gsap.from(".noticeboard h1", {
+//       top: 30,
+//       scale: 0,
+//       y: -20,
+//     });
+//   });
+// }
