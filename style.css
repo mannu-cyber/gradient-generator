@@ -13,18 +13,34 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(90deg, #9f060661, #0000006f);
+  font-family: a;
+  /* background-image: linear-gradient(90deg, #9f060661, #0000006f); */
+  background-image:linear-gradient(90deg, #e38866, #523e14)
+}
+
+.noticeboard {
+  font-size: 1vw;
+  text-align: center;
+  margin: 0 auto;
+  width: 400px;
+}
+.noticeboard h1 {
+  margin-bottom: 5vw;
+  /* background-color: red; */
+  text-transform: capitalize;
+  padding: 1vw;
+  mix-blend-mode: difference;
+  border-radius: 10px;
 }
 
 .main {
   width: 100%;
-  height: 100%;
+  height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  font-family: a;
 }
 
 .area {

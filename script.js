@@ -16,7 +16,8 @@ document.querySelector("#btn1").addEventListener("click", () => {
   colorFields.innerHTML = `  background-image: linear-gradient(90deg, 
     ${rgb1}
     , ${rgb2}`;
-    
+  document.body.style.backgroundImage = `linear-gradient(90deg, ${rgb1}, ${rgb2})`;
+  document.querySelector("#btn1").innerHTML = `${rgb1}`;
 });
 
 document.querySelector("#btn2").addEventListener("click", () => {
@@ -24,6 +25,8 @@ document.querySelector("#btn2").addEventListener("click", () => {
   colorFields.innerHTML = `  background-image: linear-gradient(90deg, 
   ${rgb1}
   , ${rgb2}`;
+  document.body.style.backgroundImage = `linear-gradient(90deg, ${rgb1}, ${rgb2})`;
+  document.querySelector("#btn2").innerHTML = `${rgb2}`;
 });
 
 colorFields.addEventListener("click", () => {
@@ -38,5 +41,14 @@ colorFields.addEventListener("click", () => {
     });
 });
 
- const bodybg = document.body;
- bodybg.style.backgroundImage = `linear-gradient(90deg, ${rgb1}, ${rgb2}`
+const tl = gsap.timeline();
+
+const done = () => {
+  document.querySelector("#animebutton").addEventListener("click", () => {
+    gsap.from(".noticeboard h1", {
+      top: 30,
+      scale: 0,
+      y: -20,
+    });
+  });
+};
