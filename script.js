@@ -13,35 +13,33 @@ const randomNum = () => {
 
 document.querySelector("#btn1").addEventListener("click", () => {
   rgb1 = randomNum();
-  colorFields.innerHTML = `  background-image: linear-gradient(90deg, 
+  colorFields.innerHTML = `  background-image: linear-gradient(to right, 
     ${rgb1}
     , ${rgb2}`;
-  document.body.style.backgroundImage = `linear-gradient(90deg, ${rgb1}, ${rgb2})`;
+  document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
   document.querySelector("#btn1").innerHTML = `${rgb1}`;
 });
 
 document.querySelector("#btn2").addEventListener("click", () => {
   rgb2 = randomNum();
-  colorFields.innerHTML = `  background-image: linear-gradient(90deg, 
+  colorFields.innerHTML = `  background-image: linear-gradient(to right, 
   ${rgb1}
   , ${rgb2}`;
-  document.body.style.backgroundImage = `linear-gradient(90deg, ${rgb1}, ${rgb2})`;
+  document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
   document.querySelector("#btn2").innerHTML = `${rgb2}`;
 });
 
 colorFields.addEventListener("click", () => {
-  const hexaString = `background-image:linear-gradient(90deg, ${rgb1}, ${rgb2})`;
+  const hexaString = `background-image:linear-gradient(to right, ${rgb1}, ${rgb2})`;
   window.navigator.clipboard
     .writeText(hexaString)
     .then(() => {
-      alert("copied code into the clipboard");
+      done();
     })
-    .catch(() => {
-      alert("sorry unable to copy");
-    });
+    .catch(() => {});
 });
 
-const tl = gsap.timeline();
+
 
 const done = () => {
   document.querySelector("#animebutton").addEventListener("click", () => {

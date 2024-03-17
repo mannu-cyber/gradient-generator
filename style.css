@@ -15,7 +15,7 @@ body {
   height: 100%;
   font-family: a;
   /* background-image: linear-gradient(90deg, #9f060661, #0000006f); */
-  background-image:linear-gradient(90deg, #e38866, #523e14)
+  background-image: linear-gradient(90deg, #e38866, #523e14);
 }
 
 .noticeboard {
@@ -29,7 +29,7 @@ body {
   /* background-color: red; */
   text-transform: capitalize;
   padding: 1vw;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   border-radius: 10px;
 }
 
@@ -54,8 +54,18 @@ body {
 }
 
 button {
-  padding: 0.4rem 2rem;
+  padding: 0.6rem 2rem;
   border-radius: 20px;
   border: none;
   margin: 10px;
+  font-size: 1rem;
+  color: white;
+}
+
+#btn1 {
+  background-color: #4dbf7a;
+}
+
+#btn2 {
+  background-color: #309f3d;
 }
