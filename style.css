@@ -1,0 +1,45 @@
+@font-face {
+  font-family: a;
+  src: url(./Roboto-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, #9f060661, #0000006f);
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  font-family: a;
+}
+
+.area {
+  width: 400px;
+  text-align: center;
+  font-size: 19px;
+  border: 1px solid pink;
+  border-radius: 10px;
+  padding: 0.8rem 2rem;
+  cursor: copy;
+}
+
+button {
+  padding: 0.4rem 2rem;
+  border-radius: 20px;
+  border: none;
+  margin: 10px;
+}
