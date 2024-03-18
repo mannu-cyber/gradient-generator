@@ -18,6 +18,9 @@ document.querySelector("#btn1").addEventListener("click", () => {
     , ${rgb2}`;
   document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
   document.querySelector("#btn1").innerHTML = `${rgb1}`;
+  document.querySelector(
+    "#btn1"
+  ).style.backgroundImage = `linear-gradient(to right, ${rgb2}, ${rgb1})`;
 });
 
 document.querySelector("#btn2").addEventListener("click", () => {
@@ -27,6 +30,13 @@ document.querySelector("#btn2").addEventListener("click", () => {
   , ${rgb2}`;
   document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
   document.querySelector("#btn2").innerHTML = `${rgb2}`;
+  document.querySelector(
+    "#btn2"
+  ).style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
+});
+
+document.querySelector("#btn3").addEventListener("click", () => {
+  document.querySelector("#btn3").style.backgroundImage =`linear-gradient(to right, ${rgb2},  ${rgb1}, )`
 });
 
 colorFields.addEventListener("click", () => {
@@ -34,18 +44,22 @@ colorFields.addEventListener("click", () => {
   window.navigator.clipboard
     .writeText(hexaString)
     .then(() => {
-      alert("copied successfuly");
+      alert("Color Copied Successfuly");
+      // done();
     })
+
     .catch(() => {});
 });
 
-// function done() {
-//   settim;
-//   document.querySelector("#animebutton").addEventListener("click", () => {
-//     gsap.from(".noticeboard h1", {
-//       top: 30,
-//       scale: 0,
-//       y: -20,
-//     });
-//   });
-// }
+function done() {
+  setTimeout(() => {
+    document.querySelector("#animebutton").addEventListener("click", () => {
+      gsap.from(".noticeboard h1", {
+        top: 30,
+        scale: 0,
+        y: -20,
+        opacity: 1,
+      });
+    });
+  }, 1000);
+}
