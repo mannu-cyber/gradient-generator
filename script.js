@@ -42,6 +42,8 @@ document.querySelector("#btn3").addEventListener("click", () => {
   document.querySelector(
     "#btn3"
   ).style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
+  document.querySelector("#btn1").innerHTML = `${rgb1}`;
+  document.querySelector("#btn2").innerHTML = `${rgb2}`;
 });
 
 colorFields.addEventListener("click", () => {
@@ -51,5 +53,7 @@ colorFields.addEventListener("click", () => {
     .then(() => {
       alert("Color Copied Successfully");
     })
-    .catch(() => {});
+    .catch(() => {
+      alert("Sorry Unable to copy");
+    });
 });
