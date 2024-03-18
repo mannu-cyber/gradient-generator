@@ -69,3 +69,7 @@ button:hover {
 #btn2 {
   background-color: #25f2db;
 }
+
+#btn3{
+  background-image: linear-gradient( to right, #25f2db, #6746b2 );
+}
